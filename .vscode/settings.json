@@ -1,3 +1,9 @@
 {
-    "dbt.enableNewLineagePanel": true
+    "dbt.enableNewLineagePanel": true,
+    "files.associations": {
+        "*.sql": "jinja-sql",
+        "*.yml": "jinja-yaml",
+        "*.md": "jinja-md"
+    },
+    "files.autoGuessEncoding": true
 }
