@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_jaffle_shop__customers
-    description: Staged customer table from jaffle shop app
+    description: Staged customer view from jaffle shop app
     columns:
       - name: customer_id
         description: Primary key for customers table
@@ -18,7 +18,7 @@ models:
         tests:
           - not_null
   - name: stg_jaffle_shop__orders
-    description: Staged orders table from jaffle_shop app
+    description: Staged orders view from jaffle_shop app
     columns:
       - name: order_id
         description: Primary key for orders table

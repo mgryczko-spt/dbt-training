@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_stripe__payments
+    description: Staged payment view from strip_payment source
+    columns:
+      - name: payment_id
+        description: Primary key for payment
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Order's id. Maintains a FK relationship with jaffle shop staged table orders PK
+        tests:
+          - not_null
+      - name: payment_method
+        description: Method for payment
+        tests:
+          - not_null
+      - name: status
+        description: '{{ doc("payment_status") }}'
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "success"
+                - "fail"
+      - name: amount
+        description: Payment amount in USD
+        tests:
+          - not_null
+      - name: created_at
+        description: Timestamp for payment
+        tests:
+          - not_null
+
+
