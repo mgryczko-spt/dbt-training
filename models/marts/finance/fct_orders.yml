@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: fct_orders
+    description: Fact table for orders
+    columns:
+      - name: order_id
+        description: Primary key for orders table
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Customer's id. Maintains a FK relationship with customer staged table PK
+        tests:
+          - not_null
+          - relationships:
+              field: customer_id
+              to: ref('dim_customers')
+      - name: order_date
+        description: Date of placing order
+        tests:
+          - not_null

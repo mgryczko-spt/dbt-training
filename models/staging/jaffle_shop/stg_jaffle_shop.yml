@@ -17,6 +17,7 @@ models:
         description: Customer's last name
         tests:
           - not_null
+          
   - name: stg_jaffle_shop__orders
     description: Staged orders view from jaffle_shop app
     columns:
