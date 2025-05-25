@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: stripe
+    description: Staged source from Stripe payment data
     database: raw
     freshness:
       error_after:
@@ -13,3 +14,4 @@ sources:
     loaded_at_field: _batched_at
     tables:
       - name: payment
+        description: Staged payment view from strip_payment source

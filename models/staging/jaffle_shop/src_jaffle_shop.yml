@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: Staged source from Jaffle Shop application
     database: raw
     schema: jaffle_shop
     freshness: 
@@ -14,5 +15,6 @@ sources:
     loaded_at_field: _etl_loaded_at
     tables:
       - name: customers
-        freshness: null
+        description: Staged customer view from jaffle shop app
       - name: orders
+        description: Staged orders view from jaffle_shop app
